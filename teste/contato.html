@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Sugestão</title>
+    <style>
+        /* Estilo básico de página */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1e3c72, #2a5298); /* Gradiente azul */
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Container centralizado */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%; /* Para garantir que o conteúdo fique centralizado na tela */
+        }
+
+        /* Estilo do formulário dentro do container */
+        .box {
+            background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro translúcido */
+            color: snow;
+            padding: 20px;
+            border-radius: 15px;
+            width: 100%;
+            max-width: 400px; /* Largura máxima do formulário */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        fieldset {
+            border: 3px solid dodgerblue;
+        }
+
+        legend {
+            background-color: dodgerblue;
+            color: white;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Estilo para os campos de entrada */
+        .inputbox {
+            position: relative;
+            margin-bottom: 20px;  /* Adiciona o espaço entre os campos */
+        }
+
+        .inputUser {
+            background: none;
+            border: none;
+            border-bottom: 1px solid snow;
+            outline: none;
+            color: snow;
+            font-size: 15px;
+            width: 100%;
+            letter-spacing: 2px;
+        }
+
+        .labelinput {
+            position: absolute;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            transition: 0.5s;
+            color: snow;
+        }
+
+        .inputUser:focus + .labelinput,
+        .inputUser:not(:placeholder-shown) + .labelinput {
+            top: -18px;
+            left: 0;
+            font-size: 12px;
+            color: dodgerblue;
+        }
+
+        #submit {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            width: 100%;
+            border: none;
+            padding: 15px;
+            color: snow;
+            font-size: 15px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        #submit:hover {
+            background-color: dodgerblue;
+        }
+
+        /* Estilos para navegação */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            color: dodgerblue;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            color: white;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navegação -->
+    <nav>
+        <ul>
+            <li><a href="sobre.html">Sobre o site</a></li>
+            <li><a href="inicial.html">Início</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- Container para o formulário -->
+    <div class="container">
+        <div class="box">
+            <form action="" method="POST">
+                <fieldset>
+                    <legend><b>Formulário de Sugestão</b></legend>
+                    <div class="inputbox">
+                        <input type="text" name="nome" class="inputUser" required>
+                        <label for="nome" class="labelinput">Nome Completo</label>
+                    </div>
+                    <div class="inputbox">
+                        <input type="email" name="email" class="inputUser" required>
+                        <label for="email" class="labelinput">Email</label>
+                    </div>
+                    <div class="inputbox">
+                        <input type="text" name="sugestao" class="inputUser" required>
+                        <label for="sugestao" class="labelinput">Sugestão</label>
+                    </div>
+                    <div>
+                        <input type="submit" name="submit" id="submit" value="Enviar">
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Universidade Uninassau</p>
+    </footer>
+
+</body>
+</html>

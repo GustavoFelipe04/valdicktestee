@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achados e Perdidos Uninassau</title>
+    <style>
+      
+        body {
+            background: linear-gradient(135deg, #1e3c72, #2a5298); /* Cor de fundo com degrade */
+            background-size: cover;  /* Faz a imagem cobrir toda a tela */
+            background-position: center; 
+            display: flex;  /* Flexbox para centralizar */
+            justify-content: center;  /* Centraliza horizontalmente */
+            align-items: center;  /* Centraliza verticalmente */
+            height: 100vh;  /* Garante que o body ocupe toda a altura da tela */
+            margin: 0;  /* Remove margens padrão */
+        }
+
+        
+        .login-container {
+            background-color: rgba(0, 0, 0, 0.6); /* Fundo semi-transparente preto */
+            padding: 30px;
+            border-radius: 10px;
+            width: 350px;  /* Largura do formulário */
+            text-align: center;
+            color: white;
+            position: relative; /* Para aplicar animação */
+            animation: slideIn 1s ease-out forwards; /* Animação para deslizar */
+            transform: translateX(100%); /* Começa fora da tela (direita) */
+            display: flex;
+            flex-direction: column;  /* Organiza os itens de cima para baixo */
+            justify-content: space-between;  /* Cria espaço entre os elementos */
+            height: 350px;  /* Altura fixa para o container */
+        }
+
+        
+        @keyframes slideIn {
+            0% {
+                transform: translateX(100%); /* Inicia fora da tela à direita */
+            }
+            100% {
+                transform: translateX(0); /* Chega ao centro */
+            }
+        }
+
+        /* Estilos para os inputs */
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #333;
+            color: white;
+        }
+
+        /* Estilos para o botão */
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #fffefc;  /* Cor amarela */
+            border: none;
+            border-radius: 5px;
+            color: black;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #f39c12;  /* Cor amarela mais escura no hover */
+        }
+
+        /* Estilos para o título */
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #f1c40f;  /* Cor dourada para o título */
+        }
+
+        /* Estilos para os links */
+        .login-links {
+            font-size: 14px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;  /* Alinha os links na horizontal */
+        }
+
+        .login-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .login-links a:hover {
+            color: #f1c40f;  /* Cor dourada no hover */
+        }
+    </style>
+</head>
+<body>
+
+
+    
+    <div class="login-container">
+        <h1>Login</h1>
+        <form action="#" method="POST">
+            <input type="text" name="username" placeholder="Número de Matrícula" required>
+            <input type="password" name="password" placeholder="Senha" required>
+            <input type="submit" value="Entrar">
+        </form>
+        <!-- Links de registro e recuperação de senha -->
+        <div class="login-links">
+            <a href="registro.html">Registrar-se</a>
+            <a href="esqueci-senha.html">Esqueci minha senha</a>
+        </div>
+    </div>
+
+</body>
+</html>
